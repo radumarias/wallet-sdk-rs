@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("sto",["Class"],[["StorageManager",,[[,,,,0,"File:storage_manager.rs:StorageManager","RustClass:StorageManager"]]]]);
