@@ -1,0 +1,10 @@
+/// Enum: BleTransmissionOptions
+///
+/// Configuration option for BLE transmission method.
+///
+/// central - Uses BLE Central mode for Transmission
+/// peripheral - Uses BLE Peripheral mode for transmission
+pub enum BleTransmissionOptions {
+    central,
+    peripheral,
+}

@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("hol",["Interface"],[["Holder",,[[,,,,0,"File:presentment/holder/holder.rs:Holder","RustClass:Holder"]]]]);

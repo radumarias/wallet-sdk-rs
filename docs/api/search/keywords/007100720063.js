@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("qrc",["Constant"],[["QrCode",,[[,,,,0,"File:presentment/mod.rs:QrCode"]]]]);

@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:Holder","Holder");NDSummary.OnSummaryLoaded("RustClass:Holder",[["Rust","Rust"]],[["Functions","Function"],["Groups","Group"],["Interfaces","Interface"]],[[13,0,2,"Holder"],[14,0,1,"Functions","Functions"],[15,0,0,"transmit","transmit"],[16,0,0,"confirm","confirm"]]);

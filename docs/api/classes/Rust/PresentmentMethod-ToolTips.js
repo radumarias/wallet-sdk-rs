@@ -1,0 +1,1 @@
+﻿NDContentPage.OnToolTipsLoaded({58:"<div class=\"NDToolTip TEnumeration LRust\"><div class=\"TTSummary\">For selecting the initial engagement method with another device as part of 18013-5</div></div>",78:"<div class=\"NDToolTip TEnumeration LRust\"><div class=\"TTSummary\">For selecting the data transmission method to another device as part of 18013-5</div></div>"});

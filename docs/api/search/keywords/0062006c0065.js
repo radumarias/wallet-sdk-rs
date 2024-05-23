@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("ble",["Constant","Enumeration"],[["BLE",,[[,,,,0,"File:presentment/mod.rs:BLE"]]],["BLETransmissionOptions",,[[,,,,1,"File:presentment/bluetooth_presentment.rs:BLETransmissionOptions"]]]]);

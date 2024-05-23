@@ -1,0 +1,1 @@
+﻿NDSummary.OnToolTipsLoaded("File:presentment/reader/mod.rs",{73:"<div class=\"NDToolTip TFunction LRust\"><div class=\"TTSummary\">Factory function that interprets the contents of retrievalMethod to return an appropriate Reader.</div></div>"});

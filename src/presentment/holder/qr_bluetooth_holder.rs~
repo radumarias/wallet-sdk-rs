@@ -1,0 +1,42 @@
+use crate::holder::holder::Holder;
+use crate::holder::TransmissionResult;
+use crate::ProgressUpdateFunction;
+
+/// Function: newQrBluetoothHolder
+///
+/// Creates a new instance of a QrBluetoothHolder
+pub fn new_qr_bluetooth_holder() -> QrBluetoothHolder {
+    QrBluetoothHolder(())
+}
+
+/// Class: QrBluetoothHolder
+///
+/// This is the BLE specific implementation
+///
+/// Get BLE holder trait as it would return from a presentment connection manager.
+///
+/// Create a generic holder trait that would return the instance of the BluetoothReader trait
+/// as one of the possible options.
+///
+/// Reader specific presentment methods - presentment over BLE.
+///
+/// Implements the <Holder> trait.
+pub struct QrBluetoothHolder(());
+
+impl QrBluetoothHolder {}
+
+impl Holder for QrBluetoothHolder {
+    fn transmit(
+        &self,
+        progressUpdateCallback: &ProgressUpdateFunction,
+    ) -> Result<Error, TransmissionResult> {
+        panic!("Not implemented");
+    }
+
+    fn confirm(
+        &self,
+        transmissionResult: TransmissionResult,
+        progressUpdateCallback: &ProgressUpdateFunction,
+    ) -> Result<Error, ()> {
+    }
+}

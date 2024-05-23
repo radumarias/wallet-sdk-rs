@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:logger","logger");NDSummary.OnSummaryLoaded("RustClass:logger",[["Rust","Rust"]],[["Classes","Class"],["Groups","Group"],["Macros","Macro"]],[[65,0,0,"logger"],[66,0,1,"Macros","Macros"],[67,0,2,"trace!","trace!"],[68,0,2,"info!","info!"],[69,0,2,"warn!","warn!"],[70,0,2,"error!","error!"]]);

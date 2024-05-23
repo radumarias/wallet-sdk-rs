@@ -1,1 +1,1 @@
-﻿NDMenu.OnSectionLoaded("classes.js",[[1,"StorageManager"]]);
+﻿NDMenu.OnSectionLoaded("classes.js",[[1,"Holder"],[1,"Issuance"],[1,"logger"],[1,"NFC"],[1,"NFCBluetoothHolder"],[1,"NfcBluetoothReader"],[1,"NFCTransmissionOptions"],[1,"PresentmentMethod"],[1,"QrBluetoothHolder"],[1,"QrBluetoothReader"],[1,"Reader"],[1,"RetrievalResult"],[1,"StorageManager"],[1,"TransmissionResult"],[1,"ValidationResult"],[1,"WifiAwareTransmissionOptions"]]);

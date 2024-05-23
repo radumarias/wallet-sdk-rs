@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("iss",["Class"],[["Issuance",,[[,,,,0,"File:issuance/mod.rs:Issuance","RustClass:Issuance"]]]]);

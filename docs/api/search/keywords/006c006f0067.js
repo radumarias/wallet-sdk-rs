@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("log",["Class"],[["logger",,[[,,,,0,"File:logger.rs:logger","RustClass:logger"]]]]);

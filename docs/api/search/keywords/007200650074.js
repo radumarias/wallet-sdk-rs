@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("ret",["Struct","Function"],[["RetrievalResult",,[[,,,,0,"File:presentment/reader/mod.rs:RetrievalResult","RustClass:RetrievalResult"]]],["retrieve",,[["Reader",,,,1,"File:presentment/reader/reader.rs:Reader.retrieve","RustClass:Reader:retrieve"]]]]);

@@ -1,0 +1,35 @@
+mod holder;
+mod nfc_bluetooth_holder;
+mod qr_bluetooth_holder;
+
+pub use crate::holder::holder::Holder;
+use crate::holder::nfc_bluetooth_holder::newNFCBluetoothHolder;
+use crate::holder::qr_bluetooth_holder::newQrBluetoothHolder;
+use crate::presentment::PresentmentMethod;
+
+/// Struct: TransmissionResult
+///
+/// This is the result of attempting to share an mDL.  After receiving a TransmissionResult,
+/// the UX will need to present something to the user.
+pub struct TransmissionResult(());
+
+/// Function: newTransmission
+///
+/// Factory function that interprets the contents of transmissionMethod to return an appropriate
+/// Holder.
+///
+/// Arguments:
+/// presentmentMethod - PresentmentMethod describing how the MDL will be presented
+///
+/// Returns:
+/// Always returns a Holder.
+pub fn new_holder(presentmentMethod: PresentmentMethod) -> Box<dyn Holder> {
+    match (
+        presentmentMethod.engagementMethod,
+        presentmentMethod.transmissionMethod,
+    ) {
+        (QrCode, BLE) => Box::new(new_qr_bluetooth_holder()),
+        (NFC, BLE) => Box::new(new_nfc_bluetooth_holder()),
+        (_, _) => panic!("Not Yet Implemented"),
+    }
+}

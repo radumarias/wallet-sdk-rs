@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("pro",["Function","Type"],[["process_command_apdu",,[["NFC",,,,0,"File:presentment/holder/nfc/mod.rs:NFC.process_command_apdu","RustClass:NFC:process_command_apdu"]]],["ProgressUpdateFunction",,[[,,,,1,"File:lib.rs:ProgressUpdateFunction"]]]]);

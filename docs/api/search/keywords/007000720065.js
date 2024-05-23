@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("pre",["Enumeration","Struct"],[["PresentmentError",,[["PresentmentMethod",,,,0,"File:presentment/mod.rs:PresentmentMethod.PresentmentError","RustClass:PresentmentMethod:PresentmentError"]]],["PresentmentMethod",,[[,,,,1,"File:presentment/mod.rs:PresentmentMethod","RustClass:PresentmentMethod"]]]]);

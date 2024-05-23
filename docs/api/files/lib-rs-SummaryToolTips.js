@@ -1,0 +1,1 @@
+﻿NDSummary.OnToolTipsLoaded("File:lib.rs",{50:"<div class=\"NDToolTip TType LRust\"><div class=\"TTSummary\">This is a callback function used to push progress updates up to the client code (UI) in near real time.</div></div>"});

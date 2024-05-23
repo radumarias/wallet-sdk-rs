@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("sta",["Constant"],[["StaticHandover",,[[,,,,0,"File:presentment/nfc_presentment.rs:StaticHandover"]]]]);

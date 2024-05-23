@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("err",["Macro"],[["error!",,[["logger",,,,0,"File:logger.rs:logger.error!","RustClass:logger:error!"]]]]);

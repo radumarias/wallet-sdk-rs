@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:NFCTransmissionOptions","NFCTransmissionOptions");NDSummary.OnSummaryLoaded("RustClass:NFCTransmissionOptions",[["Rust","Rust"]],[["Structs","Struct"]],[[45,0,0,"NFCTransmissionOptions"]]);

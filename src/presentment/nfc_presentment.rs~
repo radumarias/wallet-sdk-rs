@@ -1,0 +1,12 @@
+/// Enum: NfcEngagementOptions
+///
+/// Configuration option for NFC engagement method.
+///
+/// static_handover - The Presenter behaves as a normal NFC tag, with no dynamic interchange.  This
+///                    mode is less secure than negotiated_handover
+/// negotiated_handover - The presenter communicates in full duplex with the receiver.  This is
+///                       more secure.
+pub enum NFCEngagementOptions {
+    static_handover,
+    negotiated_handover,
+}

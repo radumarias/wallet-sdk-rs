@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("neg",["Constant"],[["NegotiatedHandover",,[[,,,,0,"File:presentment/nfc_presentment.rs:NegotiatedHandover"]]]]);

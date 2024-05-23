@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("rea",["Interface"],[["Reader",,[[,,,,0,"File:presentment/reader/reader.rs:Reader","RustClass:Reader"]]]]);

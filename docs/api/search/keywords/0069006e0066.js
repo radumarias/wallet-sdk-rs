@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("inf",["Macro"],[["info!",,[["logger",,,,0,"File:logger.rs:logger.info!","RustClass:logger:info!"]]]]);

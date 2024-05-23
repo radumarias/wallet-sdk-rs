@@ -1,0 +1,31 @@
+/// Interface: Reader
+///
+/// Interface implemented by different reader types.  While it is possible to use a specific
+/// reader directly, it's best to use the <newReader> function to create one based on the
+/// retrievalMethod you desire.
+pub trait Reader {
+    /// Method: retrieve
+    ///
+    /// Optional method which Pops open QRCode or NFC Reader to scan the date
+    /// The user can use their own QR Code scanner or NFC Reader to build a scan result with though
+    fn retrieve(progressUpdateCallback: &ProgressUpdateFunction) -> RetrievalResult;
+
+    /// Method: validate
+    ///
+    /// Uses the retrieval result to establish the transport connection, receives the mDL and
+    /// validates it against any certificate in the CertificateManager
+    fn validate(
+        retrievalResult: RetrievalResult,
+        progressUpdateCallback: &ProgressUpdateFunction,
+    ) -> Result<ValidationResult, PresentmentError>;
+
+    /// Method: validate_with_cert
+    ///
+    /// Uses the retrieval result to establish the transport connection, receives the mDL and
+    /// validates it against the specified certificate.
+    fn validate_with_cert(
+        retrievalResult: RetrievalResult,
+        progressUpdateCallback: &ProgressUpdateFunction,
+        certificateFingerprintId: CertificateFingerprintId,
+    ) -> Result<ValidationResult, PresentmentError>;
+}

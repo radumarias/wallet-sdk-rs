@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("qrb",["Class"],[["QrBluetoothHolder",,[[,,,,0,"File:presentment/holder/qr_bluetooth_holder.rs:QrBluetoothHolder","RustClass:QrBluetoothHolder"]]],["QrBluetoothReader",,[[,,,,0,"File:presentment/reader/qr_bluetooth_reader.rs:QrBluetoothReader","RustClass:QrBluetoothReader"]]]]);

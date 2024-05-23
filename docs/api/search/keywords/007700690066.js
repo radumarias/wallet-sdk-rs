@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("wif",["Constant","Struct"],[["WifiAware",,[[,,,,0,"File:presentment/mod.rs:WifiAware"]]],["WifiAwareTransmissionOptions",,[[,,,,1,"File:presentment/wifi_aware_presentment.rs:WifiAwareTransmissionOptions","RustClass:WifiAwareTransmissionOptions"]]]]);
