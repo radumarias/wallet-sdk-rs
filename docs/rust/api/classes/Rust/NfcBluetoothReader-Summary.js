@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:NfcBluetoothReader","NfcBluetoothReader");NDSummary.OnSummaryLoaded("RustClass:NfcBluetoothReader",[["Rust","Rust"]],[["Classes","Class"]],[[57,0,0,"NfcBluetoothReader"]]);

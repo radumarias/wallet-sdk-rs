@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:WifiAwareTransmissionOptions","WifiAwareTransmissionOptions");NDSummary.OnSummaryLoaded("RustClass:WifiAwareTransmissionOptions",[["Rust","Rust"]],[["Structs","Struct"]],[[58,0,0,"WifiAwareTransmissionOptions"]]);

@@ -1,1 +1,0 @@
-﻿NDSummary.OnToolTipsLoaded("RustClass:NFCTransmissionOptions",{45:"<div class=\"NDToolTip TStruct LRust\"><div class=\"TTSummary\">Struct used to communicate NFC transmission options to underlying functions.</div></div>"});

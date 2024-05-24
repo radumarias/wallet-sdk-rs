@@ -1,0 +1,1 @@
+﻿NDContentPage.OnToolTipsLoaded({45:"<div class=\"NDToolTip TStruct LRust\"><div class=\"TTSummary\">PresentmentMethod encapsulation including engagement, transmission and additional configuration.</div></div>"});

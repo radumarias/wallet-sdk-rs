@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:QrBluetoothReader","QrBluetoothReader");NDSummary.OnSummaryLoaded("RustClass:QrBluetoothReader",[["Rust","Rust"]],[["Classes","Class"]],[[61,0,0,"QrBluetoothReader"]]);

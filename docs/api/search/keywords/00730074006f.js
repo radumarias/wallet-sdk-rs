@@ -1,1 +1,0 @@
-﻿NDSearch.OnPrefixDataLoaded("sto",["Class","Enumeration"],[["StorageManager",,[[,,,,0,"File:storage_manager.rs:StorageManager","RustClass:StorageManager"]]],["StorageManagerError",,[[,,,,1,"File:storage_manager.rs:StorageManagerError"]]]]);

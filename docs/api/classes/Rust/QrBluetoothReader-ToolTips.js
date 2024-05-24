@@ -1,1 +1,0 @@
-﻿NDContentPage.OnToolTipsLoaded({30:"<div class=\"NDToolTip TInterface LRust\"><div class=\"TTSummary\">Interface implemented by different reader types.&nbsp; While it is possible to use a specific reader directly, it\'s best to use the newReader function to create one based on the retrievalMethod you desire.</div></div>"});

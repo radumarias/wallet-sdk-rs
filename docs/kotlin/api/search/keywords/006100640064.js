@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("add",["Function"],[["add",,[["StorageManagerAdaptor",,,,0,"File:wallet_sdk_rs.kt:StorageManagerAdaptor.add","KotlinClass:StorageManagerAdaptor:add"]]]]);

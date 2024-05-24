@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("cam",["Function"],[["camelVersion",,[[,,,,0,"File:lib.rs:camelVersion"]]]]);

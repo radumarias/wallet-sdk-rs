@@ -1,1 +1,0 @@
-﻿NDFramePage.OnPageTitleLoaded("RustClass:ValidationResult","ValidationResult");NDSummary.OnSummaryLoaded("RustClass:ValidationResult",[["Rust","Rust"]],[["Structs","Struct"]],[[75,0,0,"ValidationResult"]]);

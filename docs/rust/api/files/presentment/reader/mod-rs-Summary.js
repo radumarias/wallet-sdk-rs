@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("File:presentment/reader/mod.rs","mod.rs");NDSummary.OnSummaryLoaded("File:presentment/reader/mod.rs",[["Rust","Rust"]],[["Functions","Function"],["Groups","Group"],["Structs","Struct"]],[[20,0,1,"Functions","Functions"],[21,0,0,"newReader","newReader"],[22,0,2,"RetrievalResult","RetrievalResult"],[23,0,2,"ValidationResult","ValidationResult"]]);

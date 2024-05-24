@@ -4,7 +4,7 @@ plugins {
     id 'com.github.willir.rust.cargo-ndk-android'
     id 'maven-publish'
     id 'signing'
-    id 'com.gradleup.nmcp'
+//    id 'com.gradleup.nmcp'
 }
 
 android {
@@ -159,12 +159,12 @@ signing {
     sign publishing.publications.release
 }
 
-nmcp {
-    afterEvaluate {
-        publish("release") {
-            it.username.set(System.getenv("MAVEN_USERNAME"))
-            it.password.set(System.getenv("MAVEN_PASSWORD"))
-            it.publicationType.set("AUTOMATIC")
-        }
-    }
-}
+// nmcp {
+//     afterEvaluate {
+//         publish("release") {
+//             it.username.set(System.getenv("MAVEN_USERNAME"))
+//             it.password.set(System.getenv("MAVEN_PASSWORD"))
+//             it.publicationType.set("AUTOMATIC")
+//         }
+//     }
+// }

@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:TransmissionResult","TransmissionResult");NDSummary.OnSummaryLoaded("RustClass:TransmissionResult",[["Rust","Rust"]],[["Functions","Function"],["Groups","Group"],["Structs","Struct"]],[[1,0,2,"TransmissionResult"],[2,0,1,"Functions","Functions"],[3,0,0,"newTransmission","newTransmission"]]);

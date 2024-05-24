@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:StorageManagerAdaptor","StorageManagerAdaptor");NDSummary.OnSummaryLoaded("RustClass:StorageManagerAdaptor",[["Rust","Rust"]],[["Functions","Function"],["Groups","Group"],["Interfaces","Interface"]],[[77,0,2,"StorageManagerAdaptor"],[78,0,1,"Functions","Functions"],[79,0,0,"add","add"],[80,0,0,"get","get"],[81,0,0,"remove","remove"]]);

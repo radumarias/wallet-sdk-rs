@@ -1,0 +1,1 @@
+﻿NDSummary.OnToolTipsLoaded("File:presentment/nfc_presentment.rs",{33:"<div class=\"NDToolTip TEnumeration LRust\"><div class=\"TTSummary\">Configuration option for NFC engagement method.</div></div>",36:"<div class=\"NDToolTip TStruct LRust\"><div class=\"TTSummary\">Struct used to communicate NFC transmission options to underlying functions.</div></div>"});

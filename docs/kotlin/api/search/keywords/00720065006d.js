@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("rem",["Function"],[["remove",,[["StorageManagerAdaptor",,,,0,"File:wallet_sdk_rs.kt:StorageManagerAdaptor.remove","KotlinClass:StorageManagerAdaptor:remove"]]]]);

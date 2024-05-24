@@ -1,1 +1,0 @@
-﻿NDSummary.OnToolTipsLoaded("File:presentment/bluetooth_presentment.rs",{53:"<div class=\"NDToolTip TEnumeration LRust\"><div class=\"TTSummary\">Configuration option for BLE transmission method.</div></div>"});

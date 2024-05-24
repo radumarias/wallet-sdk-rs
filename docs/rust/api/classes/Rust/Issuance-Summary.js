@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:Issuance","Issuance");NDSummary.OnSummaryLoaded("RustClass:Issuance",[["Rust","Rust"]],[["Classes","Class"]],[[11,0,0,"Issuance"]]);

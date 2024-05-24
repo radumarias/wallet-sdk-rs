@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:RetrievalResult","RetrievalResult");NDSummary.OnSummaryLoaded("RustClass:RetrievalResult",[["Rust","Rust"]],[["Structs","Struct"]],[[22,0,0,"RetrievalResult"]]);

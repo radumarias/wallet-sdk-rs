@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("glo",["Section"],[["Globals",,[[,,,,0,"File:storage_manager.rs:Globals"]]]]);

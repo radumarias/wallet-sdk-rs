@@ -1,1 +1,0 @@
-﻿NDSearch.OnPrefixDataLoaded("add",["Function"],[["add",,[["StorageManager",,,,0,"File:storage_manager.rs:StorageManager.add","RustClass:StorageManager:add"]]]]);

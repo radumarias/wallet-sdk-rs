@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("File:lib.rs","lib.rs");NDSummary.OnSummaryLoaded("File:lib.rs",[["Rust","Rust"]],[["Functions","Function"],["Groups","Group"],["Types","Type"]],[[62,0,1,"Types","Types"],[63,0,2,"ProgressUpdateFunction","ProgressUpdateFunction"],[64,0,1,"Functions","Functions"],[65,0,0,"blah_version","blah_version"],[66,0,0,"camelVersion","camelVersion"]]);

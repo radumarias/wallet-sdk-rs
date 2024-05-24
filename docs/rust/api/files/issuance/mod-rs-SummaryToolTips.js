@@ -1,0 +1,1 @@
+﻿NDSummary.OnToolTipsLoaded("File:issuance/mod.rs",{11:"<div class=\"NDToolTip TClass LRust\"><div class=\"NDClassPrototype\" id=\"NDClassPrototype11\"><div class=\"CPEntry TClass Current\"><div class=\"CPModifiers\">impl </div><div class=\"CPName\">Issuance</div></div></div><div class=\"TTSummary\">Implement the credential issuance process.</div></div>"});

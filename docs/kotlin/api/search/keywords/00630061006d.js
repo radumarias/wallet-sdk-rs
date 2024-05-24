@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("cam",["Function"],[["camelVersion",,[["StorageManagerAdaptor",,,,0,"File:wallet_sdk_rs.kt:StorageManagerAdaptor.camelVersion","KotlinClass:StorageManagerAdaptor:camelVersion"]]]]);

@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:NFCBluetoothHolder","NFCBluetoothHolder");NDSummary.OnSummaryLoaded("RustClass:NFCBluetoothHolder",[["Rust","Rust"]],[["Classes","Class"]],[[10,0,0,"NFCBluetoothHolder"]]);

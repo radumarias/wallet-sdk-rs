@@ -3,20 +3,70 @@ use thiserror::Error;
 /// Type: Key
 ///
 /// Type alias for Keys, it's just a String
-type Key = String;
+uniffi::custom_newtype!(Key, String);
+pub struct Key(String);
 
 /// Type: Value
 ///
 /// Type alias for Values, it's just a String
-type Value = String;
+uniffi::custom_newtype!(Value, String);
+pub struct Value(String);
 
 /// Enum: StorageManagerError
 ///
 /// Represents errors that may occur during storage management operations
-#[derive(Error, Debug)]
+#[derive(Error, Debug, uniffi::Error)]
 pub enum StorageManagerError {
     #[error("Stub error")]
     Stub,
+}
+
+// #[uniffi::export(with_foreign)]
+// pub trait StorageManagerAdaptor: Send + Sync {
+//     fn add(&self, key: Key, value: Value) -> i8;
+// }
+
+/// Interface: StorageManagerAdaptor
+#[uniffi::export(callback_interface)]
+pub trait StorageManagerAdaptor: Send + Sync {
+    /// Function: add
+    ///
+    /// Adds a key-value pair to storage.  Should the key already exist, the value will be
+    /// replaced
+    ///
+    /// Arguments:
+    /// key - The key to add
+    /// value - The value to add under the key.
+    fn add(&self, key: Key, value: Value) -> i8;
+
+    /// Function: get
+    ///
+    /// Callback function pointer to native (kotlin/swift) code for
+    /// getting a key.
+    fn get(&self, key: Key) -> Option<Value>;
+
+    /// Function: remove
+    ///
+    /// Callback function pointer to native (kotlin/swift) code for
+    /// removing a key.  This referenced function MUST be idempotent.  In
+    /// particular, it must treat removing a non-existent key as a normal and
+    /// expected circumstance, simply returning () and not an error.
+    fn remove(&self, key: Key) -> i8;
+}
+
+/// Section: Globals
+/// Function: testFunction
+///
+/// Arguments:
+/// _key - just some key
+/// _sma - Adaptor to let rust talk to phone storage
+///
+/// Returns:
+/// Unit in all cases
+#[uniffi::export]
+#[allow(nonstandard_style)]
+pub fn testFunction(_key: Key, _sma: Box<dyn StorageManagerAdaptor>) -> () {
+    ()
 }
 
 /// Class: StorageManager
@@ -57,7 +107,7 @@ impl StorageManager {
     /// Arguments:
     /// key - <Key> to store the value under
     /// value - <Value> to store
-    fn add(key: Key, value: Value) -> Result<(), StorageManagerError> {
+    fn add(&self, key: Key, value: Value) -> Result<(), StorageManagerError> {
         panic!("Not Implemented")
     }
 
@@ -72,7 +122,7 @@ impl StorageManager {
     /// Return:
     /// None - when the key is not present in SecureStorage
     /// Some(<Value>) - when the key is present
-    fn get(key: Key) -> Result<Option<Value>, StorageManagerError> {
+    fn get(&self, key: Key) -> Result<Option<Value>, StorageManagerError> {
         panic!("Not Implemented")
     }
 
@@ -86,7 +136,7 @@ impl StorageManager {
     ///
     /// Return:
     /// () in all cases
-    fn remove(key: Key) -> Result<(), StorageManagerError> {
+    fn remove(&self, key: Key) -> Result<(), StorageManagerError> {
         panic!("Not Implemented")
     }
 }

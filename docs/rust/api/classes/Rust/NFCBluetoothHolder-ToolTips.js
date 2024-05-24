@@ -1,0 +1,1 @@
+﻿NDContentPage.OnToolTipsLoaded({4:"<div class=\"NDToolTip TInterface LRust\"><div class=\"TTSummary\">Interface implemented by different holder types.&nbsp; While it is possible to use a specific holder directly, it\'s best to use the &lt;newHolder&gt; function to create one based on the transmissionMethod you desire.</div></div>"});

@@ -70,7 +70,7 @@ Style: spruceid
 # Source Code
 # ------------------------------------------------------------------------
 
-Source Folder: ../src
+Source Folder: ../kotlin/walletsdkrs/src/main/java/com/spruceid/wallet/sdk/rs
 
 
 # This is where you tell Natural Docs which folders it should scan for source
@@ -148,7 +148,7 @@ Source Folder: ../src
 # Generated Documentation
 # ------------------------------------------------------------------------
 
-HTML Output Folder: ../docs/api
+HTML Output Folder: ../docs/kotlin/api
 
 
 # This is where you tell Natural Docs what kind of documentation you want

@@ -1,1 +1,0 @@
-﻿NDSummary.OnToolTipsLoaded("File:presentment/wifi_aware_presentment.rs",{71:"<div class=\"NDToolTip TStruct LRust\"><div class=\"TTSummary\">Struct used to convey Wifi Aware Transmission Options</div></div>"});

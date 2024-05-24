@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("rem",["Function"],[["remove",,[["StorageManager",,,,0,"File:storage_manager.rs:StorageManager.remove","RustClass:StorageManager:remove"],["StorageManagerAdaptor",,,,0,"File:storage_manager.rs:StorageManagerAdaptor.remove","RustClass:StorageManagerAdaptor:remove"]]]]);

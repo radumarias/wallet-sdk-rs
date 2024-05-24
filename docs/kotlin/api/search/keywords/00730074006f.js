@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("sto",["Interface","Enumeration"],[["StorageManagerAdaptor",,[[,,,,0,"File:wallet_sdk_rs.kt:StorageManagerAdaptor","KotlinClass:StorageManagerAdaptor"]]],["StorageManagerError",,[[,,,,1,"File:wallet_sdk_rs.kt:StorageManagerError"]]]]);

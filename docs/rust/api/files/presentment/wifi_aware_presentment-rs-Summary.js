@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("File:presentment/wifi_aware_presentment.rs","wifi_aware_presentment.rs");NDSummary.OnSummaryLoaded("File:presentment/wifi_aware_presentment.rs",[["Rust","Rust"]],[["Structs","Struct"]],[[58,0,0,"WifiAwareTransmissionOptions","WifiAwareTransmissionOptions"]]);

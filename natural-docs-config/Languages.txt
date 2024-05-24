@@ -49,6 +49,21 @@ Language: Rust
    Variable Prototype Enders: ; =
 
 
+Language: Kotlin
+
+   Extension: kt
+
+   Line Comment: // ///
+   Block Comment: /* */
+   Member Operator: .
+   Enum Values: Under Parent
+   Case Sensitive: Yes
+
+   Class Prototype Ender: {
+   Function Prototype Enders: => {
+   Variable Prototype Enders: ; =
+
+
 # These settings define the languages Natural Docs knows how to parse.  You
 # can define your own here or override the settings of the existing ones.
 # Note that all lists are space separated so that commas can be used as

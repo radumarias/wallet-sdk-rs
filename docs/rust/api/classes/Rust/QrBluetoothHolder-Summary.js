@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("RustClass:QrBluetoothHolder","QrBluetoothHolder");NDSummary.OnSummaryLoaded("RustClass:QrBluetoothHolder",[["Rust","Rust"]],[["Classes","Class"]],[[31,0,0,"QrBluetoothHolder"]]);

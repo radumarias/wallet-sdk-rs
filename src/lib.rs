@@ -2,6 +2,9 @@
 // It should be removed after we're done with implementation though
 #![allow(unused)]
 
+pub mod presentment;
+pub mod storage_manager;
+
 uniffi::setup_scaffolding!();
 
 /// Type: ProgressUpdateFunction
@@ -10,10 +13,26 @@ uniffi::setup_scaffolding!();
 /// real time.
 type ProgressUpdateFunction = dyn FnMut();
 
-pub mod presentment;
-pub mod storage_manager;
-
+/// Function: blah_version
+///
+/// Returns the current version of this lib
+///
+/// Returns:
+/// String representation of the version of this lib
 #[uniffi::export]
+#[allow(nonstandard_style)]
 pub fn blah_version() -> String {
+    "1.0.0".to_string()
+}
+
+/// Function: camelVersion
+///
+/// Returns the current version of this lib
+///
+/// Returns:
+/// String representation of the version of this lib
+#[uniffi::export]
+#[allow(nonstandard_style)]
+pub fn camelVersion() -> String {
     "1.0.0".to_string()
 }

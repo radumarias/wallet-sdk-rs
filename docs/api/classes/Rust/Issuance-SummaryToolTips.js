@@ -1,1 +1,0 @@
-﻿NDSummary.OnToolTipsLoaded("RustClass:Issuance",{29:"<div class=\"NDToolTip TClass LRust\"><div class=\"NDClassPrototype\" id=\"NDClassPrototype29\"><div class=\"CPEntry TClass Current\"><div class=\"CPModifiers\">impl </div><div class=\"CPName\">Issuance</div></div></div><div class=\"TTSummary\">Implement the credential issuance process.</div></div>"});
