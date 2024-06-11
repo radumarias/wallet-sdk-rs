@@ -2001,6 +2001,7 @@ dependencies = [
  "thiserror",
  "uniffi",
  "uuid",
+ "x509-cert",
 ]
 
 [[package]]

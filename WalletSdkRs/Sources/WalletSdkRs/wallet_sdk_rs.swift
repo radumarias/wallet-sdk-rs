@@ -458,6 +458,99 @@ fileprivate struct FfiConverterData: FfiConverterRustBuffer {
 
 
 
+public protocol CertificateManagerProtocol : AnyObject {
+    
+}
+
+open class CertificateManager:
+    CertificateManagerProtocol {
+    fileprivate let pointer: UnsafeMutableRawPointer!
+
+    /// Used to instantiate a [FFIObject] without an actual pointer, for fakes in tests, mostly.
+    public struct NoPointer {
+        public init() {}
+    }
+
+    // TODO: We'd like this to be `private` but for Swifty reasons,
+    // we can't implement `FfiConverter` without making this `required` and we can't
+    // make it `required` without making it `public`.
+    required public init(unsafeFromRawPointer pointer: UnsafeMutableRawPointer) {
+        self.pointer = pointer
+    }
+
+    /// This constructor can be used to instantiate a fake object.
+    /// - Parameter noPointer: Placeholder value so we can have a constructor separate from the default empty one that may be implemented for classes extending [FFIObject].
+    ///
+    /// - Warning:
+    ///     Any object instantiated with this constructor cannot be passed to an actual Rust-backed object. Since there isn't a backing [Pointer] the FFI lower functions will crash.
+    public init(noPointer: NoPointer) {
+        self.pointer = nil
+    }
+
+    public func uniffiClonePointer() -> UnsafeMutableRawPointer {
+        return try! rustCall { uniffi_wallet_sdk_rs_fn_clone_certificatemanager(self.pointer, $0) }
+    }
+    // No primary constructor declared for this class.
+
+    deinit {
+        guard let pointer = pointer else {
+            return
+        }
+
+        try! rustCall { uniffi_wallet_sdk_rs_fn_free_certificatemanager(pointer, $0) }
+    }
+
+    
+
+    
+
+}
+
+public struct FfiConverterTypeCertificateManager: FfiConverter {
+
+    typealias FfiType = UnsafeMutableRawPointer
+    typealias SwiftType = CertificateManager
+
+    public static func lift(_ pointer: UnsafeMutableRawPointer) throws -> CertificateManager {
+        return CertificateManager(unsafeFromRawPointer: pointer)
+    }
+
+    public static func lower(_ value: CertificateManager) -> UnsafeMutableRawPointer {
+        return value.uniffiClonePointer()
+    }
+
+    public static func read(from buf: inout (data: Data, offset: Data.Index)) throws -> CertificateManager {
+        let v: UInt64 = try readInt(&buf)
+        // The Rust code won't compile if a pointer won't fit in a UInt64.
+        // We have to go via `UInt` because that's the thing that's the size of a pointer.
+        let ptr = UnsafeMutableRawPointer(bitPattern: UInt(truncatingIfNeeded: v))
+        if (ptr == nil) {
+            throw UniffiInternalError.unexpectedNullPointer
+        }
+        return try lift(ptr!)
+    }
+
+    public static func write(_ value: CertificateManager, into buf: inout [UInt8]) {
+        // This fiddling is because `Int` is the thing that's the same size as a pointer.
+        // The Rust code won't compile if a pointer won't fit in a `UInt64`.
+        writeInt(&buf, UInt64(bitPattern: Int64(Int(bitPattern: lower(value)))))
+    }
+}
+
+
+
+
+public func FfiConverterTypeCertificateManager_lift(_ pointer: UnsafeMutableRawPointer) throws -> CertificateManager {
+    return try FfiConverterTypeCertificateManager.lift(pointer)
+}
+
+public func FfiConverterTypeCertificateManager_lower(_ value: CertificateManager) -> UnsafeMutableRawPointer {
+    return FfiConverterTypeCertificateManager.lower(value)
+}
+
+
+
+
 public protocol MDocProtocol : AnyObject {
     
     func id()  -> Uuid
@@ -563,6 +656,128 @@ public func FfiConverterTypeMDoc_lift(_ pointer: UnsafeMutableRawPointer) throws
 
 public func FfiConverterTypeMDoc_lower(_ value: MDoc) -> UnsafeMutableRawPointer {
     return FfiConverterTypeMDoc.lower(value)
+}
+
+
+
+
+/**
+ * The PlatformContext provides functions we use to access functionality from the underlying
+ * native platform.
+ *
+ * We use the older callback_interface to keep the required version level of our Android API
+ * low.
+ *
+ * Note that the interfaces use the older 'callback_interface' export so that we can use
+ * older versions of the Android SDK.  This type of interace requires the use of Box, not Arc
+ */
+public protocol PlatformContextProtocol : AnyObject {
+    
+}
+
+/**
+ * The PlatformContext provides functions we use to access functionality from the underlying
+ * native platform.
+ *
+ * We use the older callback_interface to keep the required version level of our Android API
+ * low.
+ *
+ * Note that the interfaces use the older 'callback_interface' export so that we can use
+ * older versions of the Android SDK.  This type of interace requires the use of Box, not Arc
+ */
+open class PlatformContext:
+    PlatformContextProtocol {
+    fileprivate let pointer: UnsafeMutableRawPointer!
+
+    /// Used to instantiate a [FFIObject] without an actual pointer, for fakes in tests, mostly.
+    public struct NoPointer {
+        public init() {}
+    }
+
+    // TODO: We'd like this to be `private` but for Swifty reasons,
+    // we can't implement `FfiConverter` without making this `required` and we can't
+    // make it `required` without making it `public`.
+    required public init(unsafeFromRawPointer pointer: UnsafeMutableRawPointer) {
+        self.pointer = pointer
+    }
+
+    /// This constructor can be used to instantiate a fake object.
+    /// - Parameter noPointer: Placeholder value so we can have a constructor separate from the default empty one that may be implemented for classes extending [FFIObject].
+    ///
+    /// - Warning:
+    ///     Any object instantiated with this constructor cannot be passed to an actual Rust-backed object. Since there isn't a backing [Pointer] the FFI lower functions will crash.
+    public init(noPointer: NoPointer) {
+        self.pointer = nil
+    }
+
+    public func uniffiClonePointer() -> UnsafeMutableRawPointer {
+        return try! rustCall { uniffi_wallet_sdk_rs_fn_clone_platformcontext(self.pointer, $0) }
+    }
+public convenience init(androidContext: AndroidContext?, storageManagerInterface: StorageManagerInterface) {
+    let pointer =
+        try! rustCall() {
+    uniffi_wallet_sdk_rs_fn_constructor_platformcontext_new(
+        FfiConverterOptionCallbackInterfaceAndroidContext.lower(androidContext),
+        FfiConverterCallbackInterfaceStorageManagerInterface.lower(storageManagerInterface),$0
+    )
+}
+    self.init(unsafeFromRawPointer: pointer)
+}
+
+    deinit {
+        guard let pointer = pointer else {
+            return
+        }
+
+        try! rustCall { uniffi_wallet_sdk_rs_fn_free_platformcontext(pointer, $0) }
+    }
+
+    
+
+    
+
+}
+
+public struct FfiConverterTypePlatformContext: FfiConverter {
+
+    typealias FfiType = UnsafeMutableRawPointer
+    typealias SwiftType = PlatformContext
+
+    public static func lift(_ pointer: UnsafeMutableRawPointer) throws -> PlatformContext {
+        return PlatformContext(unsafeFromRawPointer: pointer)
+    }
+
+    public static func lower(_ value: PlatformContext) -> UnsafeMutableRawPointer {
+        return value.uniffiClonePointer()
+    }
+
+    public static func read(from buf: inout (data: Data, offset: Data.Index)) throws -> PlatformContext {
+        let v: UInt64 = try readInt(&buf)
+        // The Rust code won't compile if a pointer won't fit in a UInt64.
+        // We have to go via `UInt` because that's the thing that's the size of a pointer.
+        let ptr = UnsafeMutableRawPointer(bitPattern: UInt(truncatingIfNeeded: v))
+        if (ptr == nil) {
+            throw UniffiInternalError.unexpectedNullPointer
+        }
+        return try lift(ptr!)
+    }
+
+    public static func write(_ value: PlatformContext, into buf: inout [UInt8]) {
+        // This fiddling is because `Int` is the thing that's the same size as a pointer.
+        // The Rust code won't compile if a pointer won't fit in a `UInt64`.
+        writeInt(&buf, UInt64(bitPattern: Int64(Int(bitPattern: lower(value)))))
+    }
+}
+
+
+
+
+public func FfiConverterTypePlatformContext_lift(_ pointer: UnsafeMutableRawPointer) throws -> PlatformContext {
+    return try FfiConverterTypePlatformContext.lift(pointer)
+}
+
+public func FfiConverterTypePlatformContext_lower(_ value: PlatformContext) -> UnsafeMutableRawPointer {
+    return FfiConverterTypePlatformContext.lower(value)
 }
 
 
@@ -889,6 +1104,57 @@ public func FfiConverterTypeSessionData_lift(_ buf: RustBuffer) throws -> Sessio
 public func FfiConverterTypeSessionData_lower(_ value: SessionData) -> RustBuffer {
     return FfiConverterTypeSessionData.lower(value)
 }
+
+// Note that we don't yet support `indirect` for enums.
+// See https://github.com/mozilla/uniffi-rs/issues/396 for further discussion.
+
+public enum CertificateManagerError {
+    
+    case storageManager(StorageManagerError
+    )
+}
+
+
+public struct FfiConverterTypeCertificateManagerError: FfiConverterRustBuffer {
+    typealias SwiftType = CertificateManagerError
+
+    public static func read(from buf: inout (data: Data, offset: Data.Index)) throws -> CertificateManagerError {
+        let variant: Int32 = try readInt(&buf)
+        switch variant {
+        
+        case 1: return .storageManager(try FfiConverterTypeStorageManagerError.read(from: &buf)
+        )
+        
+        default: throw UniffiInternalError.unexpectedEnumCase
+        }
+    }
+
+    public static func write(_ value: CertificateManagerError, into buf: inout [UInt8]) {
+        switch value {
+        
+        
+        case let .storageManager(v1):
+            writeInt(&buf, Int32(1))
+            FfiConverterTypeStorageManagerError.write(v1, into: &buf)
+            
+        }
+    }
+}
+
+
+public func FfiConverterTypeCertificateManagerError_lift(_ buf: RustBuffer) throws -> CertificateManagerError {
+    return try FfiConverterTypeCertificateManagerError.lift(buf)
+}
+
+public func FfiConverterTypeCertificateManagerError_lower(_ value: CertificateManagerError) -> RustBuffer {
+    return FfiConverterTypeCertificateManagerError.lower(value)
+}
+
+
+
+extension CertificateManagerError: Equatable, Hashable {}
+
+
 
 // Note that we don't yet support `indirect` for enums.
 // See https://github.com/mozilla/uniffi-rs/issues/396 for further discussion.
@@ -1366,6 +1632,74 @@ extension TerminationError: Error { }
 
 
 /**
+ * Many functions on Android will require a pointer to the android context, so we declare a type
+ * in rust so we can track it with a type.
+ *
+ * Here we use a callback interface to model the reference to an android context.  We don't need
+ * any functions, since rust code should never meddle with this.
+ */
+public protocol AndroidContext : AnyObject {
+    
+}
+
+// Magic number for the Rust proxy to call using the same mechanism as every other method,
+// to free the callback once it's dropped by Rust.
+private let IDX_CALLBACK_FREE: Int32 = 0
+// Callback return codes
+private let UNIFFI_CALLBACK_SUCCESS: Int32 = 0
+private let UNIFFI_CALLBACK_ERROR: Int32 = 1
+private let UNIFFI_CALLBACK_UNEXPECTED_ERROR: Int32 = 2
+
+// Put the implementation in a struct so we don't pollute the top-level namespace
+fileprivate struct UniffiCallbackInterfaceAndroidContext {
+
+    // Create the VTable using a series of closures.
+    // Swift automatically converts these into C callback functions.
+    static var vtable: UniffiVTableCallbackInterfaceAndroidContext = UniffiVTableCallbackInterfaceAndroidContext(
+        uniffiFree: { (uniffiHandle: UInt64) -> () in
+            let result = try? FfiConverterCallbackInterfaceAndroidContext.handleMap.remove(handle: uniffiHandle)
+            if result == nil {
+                print("Uniffi callback interface AndroidContext: handle missing in uniffiFree")
+            }
+        }
+    )
+}
+
+private func uniffiCallbackInitAndroidContext() {
+    uniffi_wallet_sdk_rs_fn_init_callback_vtable_androidcontext(&UniffiCallbackInterfaceAndroidContext.vtable)
+}
+
+// FfiConverter protocol for callback interfaces
+fileprivate struct FfiConverterCallbackInterfaceAndroidContext {
+    fileprivate static var handleMap = UniffiHandleMap<AndroidContext>()
+}
+
+extension FfiConverterCallbackInterfaceAndroidContext : FfiConverter {
+    typealias SwiftType = AndroidContext
+    typealias FfiType = UInt64
+
+    public static func lift(_ handle: UInt64) throws -> SwiftType {
+        try handleMap.get(handle: handle)
+    }
+
+    public static func read(from buf: inout (data: Data, offset: Data.Index)) throws -> SwiftType {
+        let handle: UInt64 = try readInt(&buf)
+        return try lift(handle)
+    }
+
+    public static func lower(_ v: SwiftType) -> UInt64 {
+        return handleMap.insert(obj: v)
+    }
+
+    public static func write(_ v: SwiftType, into buf: inout [UInt8]) {
+        writeInt(&buf, lower(v))
+    }
+}
+
+
+
+
+/**
  * Interface: StorageManagerInterface
  *
  * The StorageManagerInterface provides access to functions defined in Kotlin and Swift for
@@ -1411,13 +1745,7 @@ public protocol StorageManagerInterface : AnyObject {
     
 }
 
-// Magic number for the Rust proxy to call using the same mechanism as every other method,
-// to free the callback once it's dropped by Rust.
-private let IDX_CALLBACK_FREE: Int32 = 0
-// Callback return codes
-private let UNIFFI_CALLBACK_SUCCESS: Int32 = 0
-private let UNIFFI_CALLBACK_ERROR: Int32 = 1
-private let UNIFFI_CALLBACK_UNEXPECTED_ERROR: Int32 = 2
+
 
 // Put the implementation in a struct so we don't pollute the top-level namespace
 fileprivate struct UniffiCallbackInterfaceStorageManagerInterface {
@@ -1539,6 +1867,27 @@ extension FfiConverterCallbackInterfaceStorageManagerInterface : FfiConverter {
 
     public static func write(_ v: SwiftType, into buf: inout [UInt8]) {
         writeInt(&buf, lower(v))
+    }
+}
+
+fileprivate struct FfiConverterOptionCallbackInterfaceAndroidContext: FfiConverterRustBuffer {
+    typealias SwiftType = AndroidContext?
+
+    public static func write(_ value: SwiftType, into buf: inout [UInt8]) {
+        guard let value = value else {
+            writeInt(&buf, Int8(0))
+            return
+        }
+        writeInt(&buf, Int8(1))
+        FfiConverterCallbackInterfaceAndroidContext.write(value, into: &buf)
+    }
+
+    public static func read(from buf: inout (data: Data, offset: Data.Index)) throws -> SwiftType {
+        switch try readInt(&buf) as Int8 {
+        case 0: return nil
+        case 1: return try FfiConverterCallbackInterfaceAndroidContext.read(from: &buf)
+        default: throw UniffiInternalError.unexpectedOptionalTag
+        }
     }
 }
 
@@ -1875,6 +2224,9 @@ private var initializationResult: InitializationResult {
     if (uniffi_wallet_sdk_rs_checksum_constructor_mdoc_from_cbor() != 56494) {
         return InitializationResult.apiChecksumMismatch
     }
+    if (uniffi_wallet_sdk_rs_checksum_constructor_platformcontext_new() != 61889) {
+        return InitializationResult.apiChecksumMismatch
+    }
     if (uniffi_wallet_sdk_rs_checksum_method_storagemanagerinterface_add() != 15426) {
         return InitializationResult.apiChecksumMismatch
     }
@@ -1885,6 +2237,7 @@ private var initializationResult: InitializationResult {
         return InitializationResult.apiChecksumMismatch
     }
 
+    uniffiCallbackInitAndroidContext()
     uniffiCallbackInitStorageManagerInterface()
     return InitializationResult.ok
 }

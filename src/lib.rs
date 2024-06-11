@@ -1,5 +1,7 @@
 uniffi::setup_scaffolding!();
 
+pub mod certificate_manager;
+pub mod platform_context;
 pub mod storage_manager;
 
 use std::{
